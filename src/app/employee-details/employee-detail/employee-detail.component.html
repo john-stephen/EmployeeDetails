@@ -1,0 +1,83 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user-circle" [class.green-icon]="Name.valid" [class.red-icon]="Name.invalid && Name.touched"></i>
+                </div>
+            </div>
+            <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Employee Name" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-address-card" [class.green-icon]="Address.valid" [class.red-icon]="Address.invalid && Address.touched"></i>
+                </div>
+            </div>
+            <input name="Address" #Name="ngModel" [(ngModel)]="service.formData.Address" class="form-control" placeholder="Employee Address" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user-tag" [class.green-icon]="Role.valid" [class.red-icon]="Role.invalid && Role.touched"></i>
+                </div>
+            </div>
+            <input name="Role" #Name="ngModel" [(ngModel)]="service.formData.Role" class="form-control" placeholder="Employee Role" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-building" [class.green-icon]="Department.valid" [class.red-icon]="Department.invalid && Department.touched"></i>
+                </div>
+            </div>
+            <input name="Department" #Name="ngModel" [(ngModel)]="service.formData.Department" class="form-control" placeholder="Employee Department" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-cogs" [class.green-icon]="SkillSets.valid" [class.red-icon]="SkillSets.invalid && SkillSets.touched"></i>
+                </div>
+            </div>
+            <input name="SkillSets" #Name="ngModel" [(ngModel)]="service.formData.SkillSets" class="form-control" placeholder="Employee SkillSets" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-calendar-alt" [class.green-icon]="DOB.valid" [class.red-icon]="DOB.invalid && DOB.touched"></i>
+                </div>
+            </div>
+            <input name="DOB" #Name="ngModel" [(ngModel)]="service.formData.DOB" class="form-control" placeholder="Employee DOB" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-calendar-alt" [class.green-icon]="DOJ.valid" [class.red-icon]="DOJ.invalid && DOJ.touched"></i>
+                </div>
+            </div>
+            <input name="DOJ" #Name="ngModel" [(ngModel)]="service.formData.DOJ" class="form-control" placeholder="Employee DOJ" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="IsActive" #Name="ngModel" [(ngModel)]="service.formData.IsActive" />
+            <label class="form-check-label" for="defaultCheck1">
+                IsActive
+            </label>
+        </div>
+    </div>
+    <div class="form group">
+        <button class="btn btn-success btn-lg btn-block" type="submit"><i class="fas fa-database"></i>Submit</button>
+    </div>
+</form>
